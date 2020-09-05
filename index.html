@@ -34,7 +34,6 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">サービス内容と価格</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">記帳代行の流れ</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">お客様の声</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">お問合せ</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger btn btn-info" role="button" aria-pressed="true" href="#contact">決算をお急ぎの方はいますぐご連絡を</a></li>
                     </ul>
                 </div>
@@ -132,7 +131,9 @@
                         </span>
                         <h4 class="my-3">貴社に合ったベストな<br>プロを無料でご紹介</h4>
                         <p class="text-muted">税理士法人、人材派遣、スタッフ教育、経営者塾、会社再生コンサルタント、弁護士、行政書士、不動産鑑定士、社労士等
-                            提携先がありバックアップ体制が万全です。</p>
+                            提携先がありバックアップ体制が万全です。><br>
+                            ※各々の報酬は、別途かかります。<br>
+                            ご紹介につきましては、無料です。</p>
                     </div>
                 </div>
             </div>
@@ -293,8 +294,33 @@
                     <h2 class="section-heading text-uppercase">お問合せ</h2>
                     <h3 class="section-subheading text-muted">Contact us.</h3>
                 </div>
-                <div class="row">
-                    <table class="table-sm mx-auto table-light table-bordered">
+                <form action="https://formspree.io/xgengvgp" method="POST" id="contactForm" name="sentMessage" >
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" name="名前"　id="name" type="text" placeholder="名前(必須)" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="メールアドレス"　id="email" type="email" placeholder="メールアドレス(必須)" required>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <input class="form-control" name="電話番号"　id="phone" type="tel" placeholder="電話番号">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" name="メッセージ"　id="message" placeholder="本文(必須)" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-info btn-lg text-uppercase" id="sendMessageButton" type="submit" value="Send">送信</button>
+                    </div>
+                </form>
+                <div class="row py-5">
+                    <table class="table table-responsive mx-auto table-light table-bordered">
                         <tbody>
                             <tr>
                                 <th class="text-nowrap ">会社名</th>
@@ -312,7 +338,7 @@
                             </tr>
                             <tr>
                                 <th class="text-nowrap">電話番号</th>
-                                <td class="text-nowrap"><b><a href="tel:044-948-5122">044-948-5122</a></b></td>
+                                <td class="text-nowrap">044-948-5122</td>
                             </tr>
                             <tr>
                                 <th class="text-nowrap">FAX番号</th>
@@ -320,7 +346,7 @@
                             </tr>
                             <tr>
                                 <th class="text-nowrap">e-mail</th>
-                                <td class="text-nowrap"><b><a href="mailto:polaris.kudo@gmail.com?subject=%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B">polaris.kudo@gmail.com</a></b></td>
+                                <td class="text-nowrap">polaris.kudo@gmail.com</td>
                             </tr>
                             <tr>
                                 <th class="text-nowrap">営業日／時間</th>
@@ -348,8 +374,12 @@
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
-                <div class="row">
-                    <div class="mx-auto text-center">Copyright ©2020 株式会社 ポラリス経理 </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left">Copyright ©2020 株式会社 ポラリス経理</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="tel:044-948-5122"><i class="fa fa-phone" aria-hidden="true"></i></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="mailto:polaris.kudo@gmail.com?subject=%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B"><i class="fa fa-envelope" aria-hidden="true"></i></i></a>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -401,7 +431,7 @@
                                         金融機関が融資審査の判断をする時の基準となるのが、
                                         「金融検査マニュアル」に従った企業の格付けです。融資を受ける場合、
                                         債務者区分や格付は一定以上のランクでなければなりません。したがって、
-                                        債務者区分や信用格付のランクが低いと融資をいけることができません。
+                                        債務者区分や信用格付のランクが低いと融資を受けることが出来ません。
                                         格付が企業の運命を左右すると言っても過言ではありません。
                                         ですから融資を受けるためには、債務者区分や信用格付を理解しておくことが大切となります。</p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
